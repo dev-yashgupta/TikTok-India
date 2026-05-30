@@ -1,6 +1,6 @@
 export default {
 <<<<<<< HEAD
-  name: 'TikTok India',
+  name: 'Short X',
   slug: 'tiktok-india',
   version: '1.0.0',
   orientation: 'portrait',
