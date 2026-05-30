@@ -849,7 +849,7 @@ const FeedScreen = () => {
   const handleShare = async (video) => {
     try {
       const result = await Share.share({
-        message: `Check out this video on TikTok India!`,
+        message: `Check out this video on Short X!`,
         url: video.videoUrl,
       });
       
