@@ -45,7 +45,7 @@
           var match = path.match(/^\/(video|user|hashtag|messages|search|discover|upload|inbox|me)\/?([^\/]*)/);
           if (!match) return;
 
-          var scheme = 'TicTocindia://';
+          var scheme = 'ShortX://';
           var deeplink = scheme + match[1] + (match[2] ? '/' + match[2] : '');
 
           // Function to check if app is installed and handle fallback
