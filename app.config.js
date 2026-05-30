@@ -26,10 +26,10 @@ export default {
     supportsTablet: true,
     bundleIdentifier: 'com.gggroup.tiktokindia',
 =======
-  scheme: 'TicTocindia',
+  scheme: 'ShortX',
   ios: {
     supportsTablet: true,
-    bundleIdentifier: 'com.gggroup.TicTocindia',
+    bundleIdentifier: 'com.gggroup.ShortX',
 >>>>>>> master
     buildNumber: '1',
     deploymentTarget: '13.4',
@@ -58,7 +58,7 @@ export default {
       foregroundImage: './assets/icon.png',
       backgroundColor: '#ffffff'
     },
-    package: 'com.gggroup.TicTocindia',
+    package: 'com.gggroup.ShortX',
     versionCode: 2,
 >>>>>>> master
     permissions: [
