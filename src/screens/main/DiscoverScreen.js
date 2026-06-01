@@ -750,11 +750,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 12,
     flex: 1,
-<<<<<<< HEAD
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: { width: 0, height: 1 },
-    textShadowRadius: 2,
-=======
     ...Platform.select({
       web: {
         textShadow: '0px 1px 2px rgba(0, 0, 0, 0.75)'
@@ -765,7 +760,6 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
       }
     })
->>>>>>> master
   },
   noResults: {
     flex: 1,
