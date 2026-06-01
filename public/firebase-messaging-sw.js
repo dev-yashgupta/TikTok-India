@@ -22,12 +22,12 @@ const messaging = firebase.messaging();
 messaging.onBackgroundMessage(function(payload) {
   
   // Customize notification here
-  const notificationTitle = payload.notification?.title || 'TicToc India';
+  const notificationTitle = payload.notification?.title || 'Short X';
   const notificationOptions = {
     body: payload.notification?.body || 'You have a new notification',
     icon: '/assets/icon.png',
     badge: '/assets/icon.png',
-    tag: 'TicToc-notification',
+    tag: 'Short-X-notification',
     data: payload.data || {},
     actions: [
       {
