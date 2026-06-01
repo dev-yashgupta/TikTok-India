@@ -1,23 +1,11 @@
 import React, { useEffect } from 'react';
 import { Linking, Platform } from 'react-native';
-<<<<<<< HEAD
-=======
 import { WEB_URL, MOBILE_URL } from '../config/constants';
->>>>>>> master
 
 const config = {
   screens: {
     Main: {
       path: '',
-<<<<<<< HEAD
-      initialRouteName: 'Feed',
-      screens: {
-        Feed: {
-          path: 'home',
-          initialRouteName: 'FeedScreen',
-          screens: {
-            FeedScreen: 'video/:videoId?',
-=======
       screens: {
         Home: {
           path: '',
@@ -32,30 +20,18 @@ const config = {
             ChatList: 'messages',
             Chat: 'chat/:userId',
             DirectMessage: 'chat/:chatId',
->>>>>>> master
           }
         },
         Discover: {
           path: 'discover',
-<<<<<<< HEAD
-          initialRouteName: 'DiscoverScreen',
-          screens: {
-            DiscoverScreen: '',
-            HashtagVideos: 'tag/:hashtag',
-=======
           screens: {
             DiscoverScreen: '',
             HashtagVideos: 'hashtag/:tag',
->>>>>>> master
           }
         },
         Upload: 'upload',
         Inbox: {
           path: 'inbox',
-<<<<<<< HEAD
-          initialRouteName: 'InboxScreen',
-=======
->>>>>>> master
           screens: {
             InboxScreen: '',
             Chat: 'chat/:userId',
@@ -63,23 +39,12 @@ const config = {
         },
         Profile: {
           path: 'me',
-<<<<<<< HEAD
-          initialRouteName: 'ProfileScreen',
-=======
->>>>>>> master
           screens: {
             ProfileScreen: '',
             EditProfile: 'edit',
             Settings: 'settings',
           }
         },
-<<<<<<< HEAD
-        ViewProfile: 'user/:userId',
-        Comments: 'comments/:videoId',
-        Search: 'search',
-        HashtagVideos: 'hashtag/:tag',
-=======
->>>>>>> master
       }
     },
     Auth: {
@@ -95,11 +60,7 @@ const config = {
 };
 
 const linking = {
-<<<<<<< HEAD
-  prefixes: ['https://yourdomain.com', 'ShortX://'],
-=======
   prefixes: [WEB_URL, MOBILE_URL],
->>>>>>> master
   config,
   getInitialURL: async () => {
     // Get the initial URL if the app was launched with one
