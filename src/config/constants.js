@@ -1,11 +1,7 @@
 import { Platform } from 'react-native';
 
 // API Configuration
-<<<<<<< HEAD
-export const API_URL = 'http://localhost:5000';
-=======
 export const API_URL = 'https://tt-backend-128051342343.asia-south1.run.app';
->>>>>>> master
 
 // Media Configuration
 export const CLOUDINARY_CLOUD_NAME = 'your-cloud-name';
@@ -37,25 +33,16 @@ export const TOKEN_KEY = 'auth_token';
 export const USER_KEY = 'user_data';
 
 // Base URLs for different environments
-<<<<<<< HEAD
-const WEB_URL = 'https://yourdomain.com'; // Replace with your actual web domain
-const MOBILE_URL = 'ShortX://';
-=======
 // Optionally read from environment when available (Expo web supports EXPO_PUBLIC_* envs)
 export const WEB_URL =
   (typeof process !== 'undefined' && process.env && (process.env.EXPO_PUBLIC_FRONTEND_URL || process.env.FRONTEND_URL))
     || 'https://Short-X.vercel.app'; // Updated with a more realistic domain
 export const MOBILE_URL = 'ShortX://';
->>>>>>> master
 
 // Export the appropriate URL based on platform
 export const FRONTEND_URL = Platform.select({
   web: WEB_URL,
-<<<<<<< HEAD
-  default: MOBILE_URL
-=======
   default: MOBILE_URL,
->>>>>>> master
 });
 
 // Social Features
