@@ -2,10 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { authService } from '../services/authService';
 import socketService from '../services/socketService';
-<<<<<<< HEAD
-=======
 import firebaseMessagingService from '../services/firebaseMessagingService';
->>>>>>> master
 
 const AuthContext = createContext(null);
 
@@ -23,26 +20,19 @@ export const AuthProvider = ({ children }) => {
     try {
       const userData = await authService.getCurrentUser();
       const storedToken = await authService.getToken();
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> master
       if (storedToken && userData) {
         setUser(userData);
         setToken(storedToken);
         setIsAuthenticated(true);
         // Initialize socket connection for authenticated user
         socketService.connect();
-<<<<<<< HEAD
-=======
 
         // Initialize Firebase messaging for authenticated user (non-blocking)
         firebaseMessagingService.initialize(userData._id)
           .catch(firebaseError => {
             console.warn('Firebase messaging initialization failed:', firebaseError.message);
           });
->>>>>>> master
       }
     } catch (error) {
       console.error('Error loading stored user:', error);
@@ -59,8 +49,6 @@ export const AuthProvider = ({ children }) => {
       setIsAuthenticated(true);
       // Initialize socket connection after login
       socketService.connect();
-<<<<<<< HEAD
-=======
 
       // Initialize Firebase messaging after login (non-blocking)
       firebaseMessagingService.initialize(userData._id)
@@ -68,7 +56,6 @@ export const AuthProvider = ({ children }) => {
           console.warn('Firebase messaging initialization failed:', firebaseError.message);
         });
 
->>>>>>> master
       return { success: true };
     } catch (error) {
       console.error('Login error:', error);
@@ -100,11 +87,8 @@ export const AuthProvider = ({ children }) => {
       await authService.logout();
       // Disconnect socket on logout
       socketService.disconnect();
-<<<<<<< HEAD
-=======
       // Clean up Firebase messaging on logout
       firebaseMessagingService.cleanup();
->>>>>>> master
       setUser(null);
       setToken(null);
       setIsAuthenticated(false);
@@ -132,8 +116,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-<<<<<<< HEAD
-=======
   const updateAuth = async () => {
     try {
       const userData = await authService.getCurrentUser();
@@ -193,7 +175,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
->>>>>>> master
   const value = {
     user,
     token,
@@ -203,11 +184,8 @@ export const AuthProvider = ({ children }) => {
     register,
     logout,
     updateProfile,
-<<<<<<< HEAD
-=======
     updateAuth,
     handleAuthError,
->>>>>>> master
   };
 
   if (loading) {
