@@ -9,8 +9,6 @@ export const VIDEO_CONFIG = {
     fileFormat: 'mp4',
     bitrate: 2000000, // 2 Mbps
   },
-<<<<<<< HEAD
-=======
   adaptiveBitrate: {
     qualities: [
       { resolution: '360p', bitrate: 800000, width: 640, height: 360 },
@@ -22,7 +20,6 @@ export const VIDEO_CONFIG = {
     minQuality: '360p',
     maxQuality: '1080p'
   },
->>>>>>> master
   validation: {
     maxSize: 100 * 1024 * 1024, // 100MB in bytes
     maxDuration: 180, // 3 minutes in seconds
@@ -39,9 +36,6 @@ export const VIDEO_CONFIG = {
   processing: {
     thumbnailTime: 0, // Generate thumbnail from first frame
     compressionQuality: 0.8,
-<<<<<<< HEAD
-    outputFormat: 'mp4'
-=======
     outputFormat: 'mp4',
     keyframeInterval: 2, // GOP size in seconds for better seeking
     audioBitrate: 128000, // 128kbps audio bitrate
@@ -57,6 +51,5 @@ export const VIDEO_CONFIG = {
     tempDirectory: './temp',
     cleanupTempFiles: true,
     enableProgressCallback: true
->>>>>>> master
   }
 };
