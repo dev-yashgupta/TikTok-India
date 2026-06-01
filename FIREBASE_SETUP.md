@@ -36,7 +36,7 @@ This guide will help you set up Firebase Cloud Messaging for push notifications 
 3. App nickname: "Short X iOS"
 4. Click "Register app"
 5. Download `GoogleService-Info.plist`
-6. Place it in: `ios/TicTocclone/GoogleService-Info.plist` (replace the existing file)
+6. Place it in: `ios/Short-Xclone/GoogleService-Info.plist` (replace the existing file)
 
 ### 5. Configure Environment Variables
 
@@ -94,7 +94,7 @@ Replace the placeholder values in `android/app/google-services.json` with your a
 
 ### 7. Update GoogleService-Info.plist (iOS)
 
-Replace the placeholder values in `ios/TicTocclone/GoogleService-Info.plist`:
+Replace the placeholder values in `ios/Short-Xclone/GoogleService-Info.plist`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
