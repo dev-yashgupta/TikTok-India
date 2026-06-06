@@ -5,10 +5,10 @@ importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compa
 // Initialize Firebase in the service worker
 const firebaseConfig = {
   apiKey: "yAIzaSyCYPY3x8Zul6EtK3sUsiA8kdOzmoLcbz3E",
-  authDomain: "TicToc-india-111.firebaseapp.com",
-  databaseURL: "https://TicToc-india-111-default-rtdb.firebaseio.com",
-  projectId: "TicToc-india-111",
-  storageBucket: "TicToc-india-111.firebasestorage.app",
+  authDomain: "TikTok-india-111.firebaseapp.com",
+  databaseURL: "https://TikTok-india-111-default-rtdb.firebaseio.com",
+  projectId: "TikTok-india-111",
+  storageBucket: "TikTok-india-111.firebasestorage.app",
   messagingSenderId: "1053930665258",
   appId: "1:1053930665258:web:4dfc82d225208b264fda53"
 };
@@ -22,12 +22,12 @@ const messaging = firebase.messaging();
 messaging.onBackgroundMessage(function(payload) {
   
   // Customize notification here
-  const notificationTitle = payload.notification?.title || 'TicToc India';
+  const notificationTitle = payload.notification?.title || 'Short X';
   const notificationOptions = {
     body: payload.notification?.body || 'You have a new notification',
     icon: '/assets/icon.png',
     badge: '/assets/icon.png',
-    tag: 'TicToc-notification',
+    tag: 'Short-X-notification',
     data: payload.data || {},
     actions: [
       {
