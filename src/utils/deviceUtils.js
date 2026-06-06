@@ -1,10 +1,7 @@
 import { Dimensions, Platform, PixelRatio } from 'react-native';
 import * as Device from 'expo-device';
 import NetInfo from '@react-native-community/netinfo';
-<<<<<<< HEAD
-=======
 import { VIDEO_CONFIG } from '../config/videoConfig';
->>>>>>> master
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 
@@ -47,16 +44,6 @@ export const getNetworkStatus = async () => {
 // Device memory info
 export const getDeviceMemory = async () => {
   try {
-<<<<<<< HEAD
-    const totalMemory = await Device.getTotalMemoryAsync();
-    return {
-      totalMemory,
-      lowMemoryDevice: totalMemory < 2 * 1024 * 1024 * 1024, // Less than 2GB
-    };
-  } catch (error) {
-    console.error('Error getting device memory:', error);
-    return { totalMemory: null, lowMemoryDevice: false };
-=======
     // Check if getTotalMemoryAsync is available
     if (Device.getTotalMemoryAsync && typeof Device.getTotalMemoryAsync === 'function') {
       const totalMemory = await Device.getTotalMemoryAsync();
@@ -79,7 +66,6 @@ export const getDeviceMemory = async () => {
     console.error('Error getting device memory:', error);
     // Fallback: assume not low memory device
     return { totalMemory: null, lowMemoryDevice: false, error: true };
->>>>>>> master
   }
 };
 
@@ -87,22 +73,6 @@ export const getDeviceMemory = async () => {
 export const getOptimalVideoQuality = async () => {
   const { lowMemoryDevice } = await getDeviceMemory();
   const { isWifi, is4G, is5G } = await getNetworkStatus();
-<<<<<<< HEAD
-  
-  if (lowMemoryDevice) {
-    return 'low'; // 480p
-  }
-  
-  if (isWifi || is5G) {
-    return 'high'; // 1080p
-  }
-  
-  if (is4G) {
-    return 'medium'; // 720p
-  }
-  
-  return 'low'; // Default to low quality
-=======
 
   if (lowMemoryDevice) {
     return VIDEO_CONFIG.adaptiveBitrate.qualities.find(q => q.resolution === '360p');
@@ -147,7 +117,6 @@ export const selectAdaptiveQuality = async (currentQuality, playbackStats) => {
   }
 
   return currentQuality; // Keep current quality
->>>>>>> master
 };
 
 // Font scaling
@@ -205,11 +174,6 @@ export const getOptimalGridColumns = async () => {
 // Performance monitoring
 export const getPerformanceMetrics = async () => {
   try {
-<<<<<<< HEAD
-    const memory = await Device.getMemoryAsync();
-    const battery = await Device.getBatteryLevelAsync();
-    
-=======
     let memory = null;
     let battery = null;
 
@@ -222,7 +186,6 @@ export const getPerformanceMetrics = async () => {
       battery = await Device.getBatteryLevelAsync();
     }
 
->>>>>>> master
     return {
       memory,
       battery,
@@ -233,8 +196,6 @@ export const getPerformanceMetrics = async () => {
     return null;
   }
 };
-<<<<<<< HEAD
-=======
 
 // Memory optimization for video playback
 export const getMemoryOptimizedVideoConfig = async () => {
@@ -276,4 +237,3 @@ export const getMemoryOptimizedVideoConfig = async () => {
     resolution: 720
   };
 };
->>>>>>> master
